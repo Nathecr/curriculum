@@ -1,0 +1,147 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "helvetica";
+	color: white;
+
+}
+
+body, html{
+	height: 100%;
+	padding: 0;
+	background-color: #5C5C5C;
+}
+p{
+	font-size: 25px;
+}
+h2{
+	font-size: 40px;
+}
+section{
+	height:83%;
+}
+article, aside{
+	display: inline-block;
+}
+article{
+	padding: 10%;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+aside{
+	padding: 2%;
+	height: 75%;
+	width: 25%;
+	animation: color 3s infinite;
+}
+
+
+footer{
+	padding-top: 20px;
+	font-size: 20;
+	color: white;
+	background-color: #3E3E3E;
+	position: relative;
+	clear: both;
+	height: 10%;
+	padding: 0px;
+	text-align: center;
+}
+footer ul li{
+	padding: 10px; 
+	padding-top: 0px; 	
+	display: inline-block;
+}
+article div {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+article div:first-of-type {    
+  animation: showup 7s infinite;
+}
+
+article div:last-of-type {
+  width:0px;
+  animation: aparecer 7s infinite;
+}
+ 
+article div:last-of-type h2 {
+  margin-left:-355px;
+  animation: desliz 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes desliz {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes aparecer {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+@keyframes girar{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+nav{
+	padding: 2%;
+}
+.titulo{
+	width: 10%;
+	background-color: rgb(41, 41, 41);
+	color: white;
+	font-size: 30px;
+	padding: 1rem;
+	border-radius: 50px;
+	text-align: center;
+	animation: label-animation;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate; 
+}
+
+@keyframes label-animation{
+	from{
+		margin-left: 0;
+	}
+	to{
+		margin-left: 85vw;
+	}
+}
+@keyframes color{
+	0%{
+		background-color: rgba(255,0,0,0.2);	
+	}
+	25%{
+		background-color: rgba(255,251,0,0.2);	
+	}
+	50%{
+		background-color: rgba(58,255,0,0.2);	
+	}
+	75%{
+		background-color: rgba(0,255,251,0.2);	
+	}
+	100%{
+		background-color: rgba(201,0,255,0.2);	
+	}
+
+}
